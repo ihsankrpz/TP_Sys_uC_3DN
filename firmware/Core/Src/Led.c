@@ -7,7 +7,7 @@
 #include "Led.h"
 
 // Variable globale pour stocker la luminosité actuelle de la LED
-uint8_t brightness = 0;
+static uint8_t brightness = 0;
 
 // Démarre le timer
 void LedStart(void)
@@ -29,7 +29,8 @@ void LedPulse() {
     brightness += direction;
 
     // Si la luminosité atteint la valeur maximale, change de direction
-    if (brightness >= MAX_BRIGHTNESS) {
+//    if (brightness >= TIM2->CNT) {
+    if (brightness >= 255) {
         direction = -1; // Change de direction pour décrémenter
     }
 
@@ -38,6 +39,6 @@ void LedPulse() {
         direction = 1; // Change de direction pour incrémenter
     }
 
-    // Vous pouvez ajouter ici le code pour contrôler la LED avec la luminosité actuelle
+    //Activation de la led
     LedSetValue(brightness);
 }

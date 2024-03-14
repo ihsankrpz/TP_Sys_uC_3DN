@@ -1,13 +1,9 @@
 /*
- * Led.h
+ * TimeBase.h
  *
  *  Created on: Mar 14, 2024
  *      Author: ihsan
  */
-
-#ifndef INC_LED_H_
-#define INC_LED_H_
-
 
 #include "stm32l0xx_ll_adc.h"
 #include "stm32l0xx_ll_crs.h"
@@ -24,13 +20,5 @@
 #include "stm32l0xx_ll_usart.h"
 #include "stm32l0xx_ll_gpio.h"
 
-
-// Démarre le timer
-extern void LedStart(void);
-// Configure le rapport cyclique de la PWM entre 0 et 255
-extern void LedSetValue(uint8_t val);
-// À chaque appel, cette fonction incrémente la luminosité de la LED
-// Arrivé à la valeur maximale, chaque appel décrémente la LED
-extern void LedPulse(void);
-
-#endif /* INC_LED_H_ */
+//start tim2 ch2
+extern void TimeBaseStartIT(void);
