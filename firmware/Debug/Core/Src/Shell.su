@@ -1,0 +1,7 @@
+../Core/Src/Shell.c:15:5:shHelp	48	static
+../Core/Src/Shell.c:29:9:isChar	16	static
+../Core/Src/Shell.c:38:9:isSpace	16	static
+../Core/Src/Shell.c:54:9:ShellInit	24	static
+../Core/Src/Shell.c:74:9:ShellAdd	24	static
+../Core/Src/Shell.c:90:9:ShellExec	136	static
+../Core/Src/Shell.c:136:9:ShellProcess	16	static

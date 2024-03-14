@@ -149,7 +149,8 @@ void TIM21_IRQHandler(void)
     if(LL_TIM_IsActiveFlag_UPDATE(TIM21) != RESET) {
         LL_TIM_ClearFlag_UPDATE(TIM21);
         // Appel à la fonction LedPulse
-        LedPulse();
+        //LedPulse();
+        AnalogOutPulse();
     }
   /* USER CODE END TIM21_IRQn 0 */
   /* USER CODE BEGIN TIM21_IRQn 1 */

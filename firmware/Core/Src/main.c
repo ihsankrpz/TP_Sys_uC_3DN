@@ -102,6 +102,11 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LedStart();
   TimeBaseStartIT();
+  AnalogOutInit();
+
+  hShell_t hShell;
+
+  ShellInit(&hShell, &SerialTransmit);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,10 +114,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-//	LedPulse();
-//	LL_mDelay(1);
-	char ch = SerialReceiveChar();
-	SerialTransmit(&ch, 1); // Il faut passer l'adresse de ch, pas la valeur
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -386,7 +388,7 @@ static void MX_TIM21_Init(void)
   /* USER CODE END TIM21_Init 1 */
   TIM_InitStruct.Prescaler = 0;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 32000;
+  TIM_InitStruct.Autoreload = 1000;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   LL_TIM_Init(TIM21, &TIM_InitStruct);
   LL_TIM_DisableARRPreload(TIM21);

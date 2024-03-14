@@ -51,6 +51,7 @@ extern "C" {
 #include "Led.h"
 #include "TimeBase.h"
 #include "Serial.h"
+#include "Shell.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

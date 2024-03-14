@@ -31,3 +31,6 @@ LL drivers are specific to uC and HAL drivers are more portable.
 
 #__STATIC_INLINE
 __STATIC_INLINE is used to declare a function statically and the compiler will generate function only where necessary.
+
+#Led_Timer
+We have 32Mhz clock and we need to scale the timer at 1kHz clock. We choose PSC + ARR  = 32000.

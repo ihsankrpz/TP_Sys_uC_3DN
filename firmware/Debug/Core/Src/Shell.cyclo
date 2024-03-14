@@ -1,0 +1,7 @@
+../Core/Src/Shell.c:15:5:shHelp	2
+../Core/Src/Shell.c:29:9:isChar	9
+../Core/Src/Shell.c:38:9:isSpace	2
+../Core/Src/Shell.c:54:9:ShellInit	2
+../Core/Src/Shell.c:74:9:ShellAdd	3
+../Core/Src/Shell.c:90:9:ShellExec	9
+../Core/Src/Shell.c:136:9:ShellProcess	18
