@@ -111,6 +111,8 @@ int main(void)
     /* USER CODE END WHILE */
 //	LedPulse();
 //	LL_mDelay(1);
+	char ch = SerialReceiveChar();
+	SerialTransmit(&ch, 1); // Il faut passer l'adresse de ch, pas la valeur
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
