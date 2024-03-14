@@ -6,7 +6,7 @@ There is three part :
 	- Firmware : STM32 firmware using STM32CubeIDE
 	- Hardware : Conception with KiCAD.
 
-
+# Hardware
 
 #STM32L021K4T6
 PB9 pin is connected to reset. L1,C4 and C5 is used to filter power supply.
@@ -22,3 +22,12 @@ When this pin is low, VOUT is updated with input register content.
 This pin can be tied to low (VSS) if the VOUT update is desired at the rising edge of the CS pin. 
 This pin can be driven by an external control device such as an MCU I/O pin. 
 MISO pin of SDI not used because STM32 is used Transmit only.
+
+# Firmware
+
+#LL drivers
+Using LL drivers instead of using HAL drivers allows to use low-level registers to have beter optimisation.
+LL drivers are specific to uC and HAL drivers are more portable.
+
+#__STATIC_INLINE
+__STATIC_INLINE is used to declare a function statically and the compiler will generate function only where necessary.
